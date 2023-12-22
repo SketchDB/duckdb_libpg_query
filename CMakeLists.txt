@@ -42,3 +42,6 @@ endfunction()
 disable_target_warnings(duckdb_pg_query)
 
 set_target_properties(duckdb_pg_query PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+# add alias
+add_library(contrib::duckdb_libpg_query ALIAS duckdb_pg_query)
